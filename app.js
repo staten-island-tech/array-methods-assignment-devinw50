@@ -1,4 +1,3 @@
-const year = 2023;
 
 const students = [
     {
@@ -7,8 +6,8 @@ const students = [
         graduated:  false,
         DOB: 2008,
         siblings:["Bonsy", "Danny"],
-        year,
-        age: function () {
+        year: 2023,
+        age: function (hi) {
             return year - this.DOB;
         },
     },
@@ -18,8 +17,8 @@ const students = [
         graduated:  false,
         DOB: 2009,
         siblings:["Sherry", "Min"],
-        year,
-        age: function () {
+        year: 2023,
+        age: function (hi) {
             return year - this.DOB;
         },
     },
@@ -29,25 +28,24 @@ const students = [
         graduated:  true,
         DOB: 1960,
         siblings:["Jimmy", "Lebron"],
-        year,
+        year: 2023,
         age: function (hi) {
-            return year - 50;
+            return year - this.DOB;
         },
     },
 ];
+console.log(students.age);
 //arrays store items and can access items by their index starting at 0
-console.log(students[students.firstName]); 
-console.log(students[students.age])
 //foreach to run function on every item (for loop);
 students.forEach((students)=> console.log(students.firstName, students.lastName))
 students.forEach((students)=> console.log(students.graduated))
 students.forEach((students)=> console.log(students.DOB))
-students.forEach((students)=> console.log(students.siblings))
-students.forEach((students)=> console.log(students.age))
-
+students.forEach((student)=> console.log(student.siblings))
+students.forEach((student)=> console.log(student.age))
 
 
 
 //arrow functions ()=> are simlpier, auto return its output, this keyword changes
-//const graduates = students.filter((student)=> student.graduated !== true);
-//console.log (current);
+const graduates = graduated.filter((student)=> student.graduated !== true);
+console.log (students);
+
