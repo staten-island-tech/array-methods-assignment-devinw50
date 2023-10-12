@@ -7,9 +7,7 @@ const students = [
         DOB: 2008,
         siblings:["Bonsy", "Danny"],
         year: 2023,
-        age: function (hi) {
-            return year - this.DOB;
-        },
+        
     },
     {
         firstName: "Eric",
@@ -18,9 +16,7 @@ const students = [
         DOB: 2009,
         siblings:["Sherry", "Min"],
         year: 2023,
-        age: function (hi) {
-            return year - this.DOB;
-        },
+       
     },
     {
         firstName: "Michael",
@@ -29,9 +25,7 @@ const students = [
         DOB: 1960,
         siblings:["Jimmy", "Lebron"],
         year: 2023,
-        age: function (hi) {
-            return year - this.DOB;
-        },
+       
     },
 ];
 console.log(students.age);
@@ -40,12 +34,11 @@ console.log(students.age);
 students.forEach((students)=> console.log(students.firstName, students.lastName))
 students.forEach((students)=> console.log(students.graduated))
 students.forEach((students)=> console.log(students.DOB))
-students.forEach((student)=> console.log(student.siblings))
-students.forEach((student)=> console.log(student.age))
+const sibling = students.forEach((students)=> students.siblings.forEach((sibling) =>console.log(sibling)));
 
 
-
+//
 //arrow functions ()=> are simlpier, auto return its output, this keyword changes
-const graduates = graduated.filter((student)=> student.graduated !== true);
-console.log (students);
+const graduates = students.filter((students)=> students.graduated === true);
+console.log (graduates);
 
